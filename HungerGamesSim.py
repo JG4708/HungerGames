@@ -4,12 +4,14 @@ import random
 boys = ["Arnold", "Bobby", "Charles", "Connor", "Steve", "Xavier", "Gabriel", "Xenk", "Jack", "Jarnathan", "Peter", "Elias", "Miles", "Maximus", "John"]
 girls = ["Kate",  "Alice", "Olivia", "Violet", "Rue", "Ruby", "Elizabeth", "Rita", "Shelly", "Vivian", "Sarah", "Emily", "Juliette", "Lucille",]
 death = [" got stabbed and died.", " stepped on a land mine and died", " fell of a cliff", " was decapitated by a sword", " was attacked by tracker jackers", " died from hypothermia", " starved to death", " was shot through the heart with an arrow", " was betrayed by an ally and killed", " died from sever burns", " inhaled too much smoke", " was eaten by a bear"]
-lives = [" made an alliance with another tribute", ]
+lives = [" made an alliance with another tribute", " built a fire" ]
 goingToDie = []
+goingToLive = []
 
 tributeGirls = []
 tributeBoys = []
 tributes = []
+day = 0
 
 #USE f strings
 #EXAMPLE:
@@ -40,7 +42,10 @@ def chooseGirl():
     return girl
 
 
-num = int(input("How many tributes would you like to enter? "))
+def runARound():
+    global day, tributes,
+
+num = int(input("How many tributes would you like to enter (max 24)? "))
 
 for x in range(num):
     user = input("Is this tribute a boy or a girl? ")
@@ -65,3 +70,8 @@ for x in tributeBoys:
 for x in tributeGirls:
     tributes.append(x)
 
+print(tributes)
+
+
+
+#while len(tributes) > 1:
