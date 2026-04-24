@@ -2,8 +2,6 @@ import random
 
 boys = ["Arnold", "Bobby", "Charles", "Connor", "Steve", "Xavier", "Gabriel", "Xenk", "Jack", "Jarnathan", "Peter", "Elias", "Miles", "Maximus", "John"]
 girls = ["Kate",  "Alice", "Olivia", "Violet", "Rue", "Ruby", "Elizabeth", "Rita", "Shelly", "Vivian", "Sarah", "Emily", "Juliette", "Lucille",]
-death = ["got stabbed and died.", "stepped on a land mine and died", "fell of a cliff", "was decapitated by a sword", "was attacked by tracker jackers", "died from hypothermia", "starved to death", "was shot through the heart with an arrow", "was betrayed by an ally and killed", "died from sever burns", "inhaled too much smoke", "was eaten by a bear", "was poisoned by another tribute", "lost a one-on-one duel to the death", "drowned in a lake", "was caught in a forest fire"]
-lives = ["made an alliance with another tribute", "built a fire", "slept the whole day", "eats a lot of food", "received a gift from sponsors", "practiced with their weapons" "tames a rabbit","kills another tribute", "breaks an alliance", "bonds with another tribute while singing Golden", "thinks of home", "hunts for food", "sets up camp", "enjoys the sunrise", "kills a bear"]
 goingToDie = []
 outcomes = []
 goingToLive = []
@@ -56,7 +54,7 @@ def runRound():
              "received a gift from sponsors", "practiced with their weapons", "tames a rabbit",
              "breaks an alliance", "bonds with another tribute while singing Golden", "thinks of home",
              "hunts for food", "sets up camp", "enjoys the sunrise", "kills a bear", "climbed a tree", "stalked another tribute",
-             "surveyed the arena", "had a mental breakdown", "ran around delirious"]
+             "surveyed the arena", "had a mental breakdown", "ran around delirious", "performed a rain dance", "performed a satanic ritual"]
     day += 1
     goingToDie = []
     goingToLive = []
