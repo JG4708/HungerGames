@@ -49,41 +49,36 @@ def runRound():
     death = ["got stabbed and died.", "stepped on a land mine and died", "fell of a cliff",
              "was decapitated by a sword", "was attacked by tracker jackers and died", "died from hypothermia",
              "starved to death", "was shot through the heart with an arrow", "was betrayed by an ally and killed",
-             "died from sever burns", "inhaled too much smoke", "was eaten by a bear",
+             "died from sever burns", "inhaled too much smoke and died", "was eaten by a bear",
              "was poisoned by another tribute", "lost a one-on-one duel to the death", "drowned in a lake",
-             "was caught in a forest fire"]
+             "was caught in a forest fire", "fell out of a tree and died", "ate a poisonous berry",]
     lives = ["made an alliance with another tribute", "built a fire", "slept the whole day", "eats a lot of food",
-             "received a gift from sponsors", "practiced with their weapons", "tames a rabbit", "kills another tribute",
+             "received a gift from sponsors", "practiced with their weapons", "tames a rabbit",
              "breaks an alliance", "bonds with another tribute while singing Golden", "thinks of home",
-             "hunts for food", "sets up camp", "enjoys the sunrise", "kills a bear"]
+             "hunts for food", "sets up camp", "enjoys the sunrise", "kills a bear", "climbed a tree", "stalked another tribute",
+             "surveyed the arena", "had a mental breakdown", "ran around delirious"]
     day += 1
     goingToDie = []
     goingToLive = []
     print()
     print("DAY {}".format(day))
     print()
-    numDie = random.randint(1, len(tributes)-1)
+    numDie = random.randint(0, len(tributes)-1)
     
 
     # HOW MANY DIE
     for x in range(numDie):
         random.shuffle(tributes)
-        print("TRIBUTE 0 : " , tributes[0] )
         goingToDie.append(tributes[0])
         tributes.remove(tributes[0])
-        print("TRIBUTE 0-after : " , tributes[0] )
-    
 
 
     # DEAD
-    for x in goingToDie:
+    for x in range(len(goingToDie)):
         storyline = f"{goingToDie[0]} {death[0]}"
+        goingToDie.remove(goingToDie[0])
         random.shuffle(death)
         outcomes.append(storyline)
-        goingToDie.remove(x)
-        print(x)
-        print("its working")
-
 
 
     #LIVING
@@ -97,16 +92,14 @@ def runRound():
 
 
 
-    print()
-    print(tributes)
-    print(goingToDie)
-    print()
-    for x in outcomes:
+    for x in range(len(outcomes)):
         random.shuffle(outcomes)
-        print(x)
+        print(outcomes[0])
+        outcomes.remove(outcomes[0])
 
 
-
+    print()
+    print("There are {} tributes left.".format(len(tributes)))
 
 
 
@@ -144,8 +137,12 @@ while len(tributes) > 1 and (go == "Yes" or go == "yes"):
         print()
         runRound()
         print()
-        go = input("Are you ready for the next round? ")
+        go = input("Say yes when ready for next round: ")
         print("Next day...")
+
+
+
+
 
 
 if len(tributes) == 1:
