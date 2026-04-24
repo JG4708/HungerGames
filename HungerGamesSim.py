@@ -62,8 +62,8 @@ def runRound():
     print()
     print("DAY {}".format(day))
     print()
-    numDie = round(random.randint(1, len(tributes)/3 * 2))
-    round(numDie)
+    numDie = random.randint(1, len(tributes)-1)
+    
 
     # HOW MANY DIE
     for x in range(numDie):
@@ -72,9 +72,7 @@ def runRound():
         goingToDie.append(tributes[0])
         tributes.remove(tributes[0])
         print("TRIBUTE 0-after : " , tributes[0] )
-    print()
-    print(tributes)
-    print(goingToDie)
+    
 
 
     # DEAD
@@ -83,9 +81,9 @@ def runRound():
         random.shuffle(death)
         outcomes.append(storyline)
         goingToDie.remove(x)
-    print()
-    print(tributes)
-    print(goingToDie)
+        print(x)
+        print("its working")
+
 
 
     #LIVING
