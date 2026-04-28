@@ -44,7 +44,7 @@ def runRound():
              "starved to death", "was shot through the heart with an arrow", "was betrayed by an ally and killed",
              "died from sever burns", "inhaled too much smoke and died", "was eaten by a bear",
              "was poisoned by another tribute", "lost a one-on-one duel to the death", "drowned in a lake",
-             "was caught in a forest fire", "fell out of a tree and died", "ate a poisonous berry",]
+             "was caught in a forest fire and died", "fell out of a tree and died", "ate a poisonous berry",]
     lives = ["made an alliance with another tribute", "built a fire", "slept the whole day", "eats a lot of food",
              "received a gift from sponsors", "practiced with their weapons", "tames a rabbit",
              "breaks an alliance", "bonds with another tribute while singing Golden", "thinks of home",
